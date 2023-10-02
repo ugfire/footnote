@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>claire</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body class="body">
+    <header><div id="loading">
+  <div id="loading-center">
+    <div id="loading-center-absolute">
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+      <div class="object"></div>
+    </div>
+  </div>
+</div>
+
+<header>
+  <a
+    href="https://api.whatsapp.com/send?phone=+256700372968&text=Hello Footnote Consults!"
+    class="float"
+    target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <!-- Top Navbar -->
+  <div class="top_nav">
+    <div class="container">
+      <ul class="list-inline info text-center">
+        <li>
+          <span class="fa fa-phone"></span> +256-700-372-968 / +256 774 692126
+        </li>
+        <li>
+          <a target="_blank" href="mailto:footnoteconsults@gmail.com"
+            ><span class="fa fa-envelope"></span> footnoteconsults@gmail.com</a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><span class="fa fa-clock-o"></span> Mon - Sat 9:00 - 19:00</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Top Navbar end -->
+
+  <!-- Navbar -->
+  <nav class="navbar bootsnav">
+    <div class="container">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle"
+          data-toggle="collapse"
+          data-target="#navbar-menu">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href=""
+          ><img class="logo" src="Assets/images/logos/logo.png" alt=""
+        /></a>
+      </div>
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav menu">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="about">About Us</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="projects">Projects</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="csr">CSR</a></li>
+          <li><a href="contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+  <div class="bg-danger" id="adbanner">
+    <p class="bg-danger m-0 py-3 p text-center d-md-none" id="advert2">
+      Are you a Ugandan living abroad, click here to see our special offer for
+      you.
+    </p>
+
+    <!-- Add the "advert" element for large screens -->
+    <p
+      class="bg-danger m-0 py-3 display-3 text-center d-none d-md-block"
+      id="advert">
+      Are you a Ugandan living abroad, click here to see our special offer for
+      you.
+    </p>
+  </div>
+  <script>
+    // Set up a timer to control the visibility and animation of the element
+    setInterval(function () {
+      // Show the element
+      document.getElementById("adbanner").style.display = "block";
+
+      // Wait for 1 minute
+      setTimeout(function () {
+        // Hide the element
+        document.getElementById("adbanner").style.display = "none";
+
+        // Wait for 10 seconds
+        setTimeout(function () {
+          // Show the element again
+          document.getElementById("adbanner").style.display = "block";
+        }, 10000);
+      }, 10000);
+    }, 10000);
+  </script>
+  <script>
+    function toggleElements() {
+      const smallScreenText = document.querySelector(".d-md-none");
+      const advert = document.querySelector(".d-md-block");
+      const advbanner = document.querySelector("#adbanner");
+
+      if (window.innerWidth < 768) {
+        smallScreenText.style.display = "block";
+        advert.style.display = "none";
+      } else {
+        smallScreenText.style.display = "none";
+        advert.style.display = "block";
+        advert.style.display = "block";
+        advert.style.padding = "20px";
+        advert.style.fontSize = "24px";
+        advert.style.backgroundColor = "#009aee";
+        advert.style.margin = "0";
+        advert.style.color = "#ffffff";
+      }
+    }
+
+    // Call the toggleElements function on window load and resize events
+    window.addEventListener("load", toggleElements);
+    window.addEventListener("resize", toggleElements);
+  </script>
+
+  <script>
+    function toggleElements() {
+      const smallScreenText = document.querySelector(".d-md-none");
+
+      const advert2 = document.querySelector("#advert2");
+
+      if (window.innerWidth > 768) {
+        smallScreenText.style.display = "block";
+        advert2.style.display = "none";
+      } else {
+        smallScreenText.style.display = "none";
+        advert2.style.display = "block";
+        advert2.style.display = "block";
+        advert2.style.padding = "5px";
+        advert2.style.fontSize = "120%";
+        advert2.style.backgroundColor = "#009aee";
+        advert2.style.margin = "0";
+        advert2.style.color = "#ffffff";
+      }
+    }
+
+    // Call the toggleElements function on window load and resize events
+    window.addEventListener("load", toggleElements);
+    window.addEventListener("resize", toggleElements);
+  </script>
+</header>
+<!-- Header end -->
+
+<script>
+  const advertBtn = document.getElementById("advert");
+
+  advertBtn.addEventListener("click", () => {
+    Swal.fire({
+      html: '<h2 class="adverttitle">SPECIAL OFFER!</h2><div class="popuptext" > <p class="text-primary">Are you a Ugandan living in diaspora with a dream to build a residential house, business apartment or a commercial building??</p><p> Look no further Footnote has a design and build package personalised for each of our esteemed customers. The package is phased all through the design stage and cost estimation, foundation and superstructure (floors) phase for proper planning.</p> <p class="bg-warning p-1 fw-bold">Contact Dean C.N on +256-700372968</P> for your quote and start your journey to living the dream. God bless You.</div>',
+      imageUrl: "https://i.postimg.cc/3J3XhdGK/building.png",
+      imageWidth: 400,
+      imageAlt: "Example image",
+      icon: "info",
+      confirmButtonText: '<i class="fab fa-whatsapp"></i> Get Offer',
+      confirmButtonClass: "confirmbtn",
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      cancelButtonClass: "cancelbtn",
+      width: "90%", // Default width for large screens
+      customClass: {
+        title: "red-title",
+        content: "large-text",
+      },
+      preConfirm: () => {
+        // Open the WhatsApp chat with the phone number
+        window.open("tel:+256 700372968");
+      },
+    });
+  });
+
+  const advertBtn2 = document.getElementById("advert2");
+
+  advertBtn2.addEventListener("click", () => {
+    Swal.fire({
+      html: '<h2 class="adverttitle">SPECIAL OFFER!</h2><div class="popuptext"> <p class="text-primary">Are you a Ugandan living in diaspora with a dream to build a residential house, business apartment or a commercial building??</p><p> Look no further Footnote has a design and build package personalised for each of our esteemed customers. The package is phased all through the design stage and cost estimation, foundation and superstructure (floors) phase for proper planning.</p> <p class="bg-warning p-1 fw-bold">Contact Dean C.N on +256-700372968</P> for your quote and start your journey to living the dream. God bless You.</div>',
+      imageUrl: "https://i.postimg.cc/3J3XhdGK/building.png",
+      imageWidth: 200,
+      imageHeight: 200,
+      imageAlt: "abroad",
+      icon: "info",
+      confirmButtonText: '<i class="fab fa-whatsapp"></i> Get Offer',
+      confirmButtonClass: "confirmbtn",
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      cancelButtonClass: "cancelbtn",
+      width: "90%", // Default width for large screens
+      customClass: {
+        title: "red-title",
+        content: "large-text",
+      },
+      preConfirm: () => {
+        // Open the WhatsApp chat with the phone number
+        window.open("tel:+256 700372968");
+      },
+    });
+  });
+</script>
+
+<!-- Add Font Awesome stylesheet -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-xV/KJyTq3w65JmzZ7V2dHxjzX9Q2WJy8RvD26pIwLckAr+0YMF3q7vjj1zL1j9nOXELoW8nNyRgGjKMDwFd7Fw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+
+<!-- Add Sweet Alert library -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
+    <div class="container">
+        
+      <main class="p-3 push ">
+  <p class="ib push-1-2 py-3">
+
+    <a  href="/blog/" class="btn btn-success back">← Back to the blog</a>
+  </p>
+   <h1 class="text-center ">Building jekyll sites</h1>
+   <p class="text-secondary btn-sm bg-warning text-center">
+    <i> Written by <strong class="text-dark fw-light"> Alfred Ochola</strong> </i>
+    <i class="text-dark"> On: <strong class="text-dark fw-light"> 2021-Aug-23</strong> </i>
+  </p>
+  <h1 class="exa"></h1>
+  <p>I HAVE SUCCESSFULLY BUILT A JEKYLL SITE</p>
+
+<h2 id="blessed-be-the-name-of-jesus-christ">Blessed be the Name of Jesus Christ</h2>
+
+  <p class="ib push-1-2 py-3">
+
+    <a href="/blog/" class="btn btn-success back" >← Back to the blog</a>
+  </p>
+  
+</main>
+
+    </div>
+    <footer>
+  <!-- Footer top -->
+  <div class="container footer_top">
+    <div class="row">
+      <div class="col-lg-5 col-sm-7">
+        <div class="footer_item">
+          <h4>About Company</h4>
+          <img
+            class="logo"
+            src="/Assets/images/logos/Footerpng.png"
+            alt="Construction" />
+          <p>
+            Footnote Consults Limited, FCL is a private owned company that was
+            established in 2018. The Company offers a broad spectrum in Civil
+            engineering, Architecture and Project management. FCL is constituted
+            by smart hardworking and resilient engineers, architects and project
+            managers that will add every bit of value to money.
+          </p>
+
+          <ul class="list-inline footer_social_icon">
+            <li>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/footnoteconsults.com"
+                ><span class="fa fa-facebook"></span
+              ></a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/footnoteconsult?s=11"
+                ><span class="fa fa-twitter"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-5">
+        <div class="footer_item">
+          <h4>Explore Links</h4>
+          <ul class="list-unstyled footer_menu">
+            <li>
+              <a href="services"
+                ><span class="fa fa-play"></span> Our services</a
+              >
+            </li>
+            <li>
+              <a href="about#Mission"
+                ><span class="fa fa-play"></span> Our Mission</a
+              >
+            </li>
+            <li>
+              <a href="about#Team"
+                ><span class="fa fa-play"></span> Meet our team</a
+              >
+            </li>
+            <li>
+              <a href="projects#Finished"
+                ><span class="fa fa-play"></span> Our Recent Projects</a
+              >
+            </li>
+            <li>
+              <a href="projects#Ongoing"
+                ><span class="fa fa-play"></span> Ongoing Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-5">
+        <div class="footer_item">
+          <h4>Contact us</h4>
+          <ul class="list-unstyled footer_contact">
+            <li>
+              <span class="fa fa-map-marker"></span>
+              <p>
+                Plot 422 Bombo Road, <br />P.O. Box 107857,<br />
+                Kampala Uganda
+              </p>
+            </li>
+
+            <li>
+              <a target="_blank" href="mailto:footnoteconsults@gmail.com"
+                ><span class="fa fa-envelope"></span
+                >footnoteconsults@gmail.com</a
+              >
+            </li>
+            <li>
+              <span class="fa fa-mobile"></span>
+              <p>+256-700-372-968 <br />+256 774 692126</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer top end -->
+
+  <!-- Footer bottom -->
+  <div class="footer_bottom text-center">
+    <p class="wow fadeInRight">
+      &copy;Footnote Consults Ltd 2023. All Rights Reserved
+    </p>
+  </div>
+  <!-- Footer bottom end -->
+</footer>
+<!-- JavaScript -->
+<script src="Assets/js/jquery-1.12.1.min.js"></script>
+<script src="Assets/js/bootstrap.min.js"></script>
+
+<!-- Bootsnav js -->
+<script src="Assets/js/bootsnav.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script src="Assets/js/isotope.js"></script>
+<script src="Assets/js/isotope-active.js"></script>
+<script src="Assets/js/jquery.fancybox.js?v=2.1.5"></script>
+
+<script src="Assets/js/jquery.scrollUp.min.js"></script>
+
+<script src="Assets/js/main.js"></script>
+
+<script src="Assets/js/owl-run.js"></script>
+<script src="Assets/js/owl-carousel/owl.carousel.min.js"></script>
+<script src="Assets/js/owl-carousel/owl.carousel.js"></script>
+
+<script src="Assets/js/project.owl.js"></script>
+
+   
+  </body>
+</html>

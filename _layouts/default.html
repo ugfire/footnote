@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Footnote Consults | Home</title>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="Assets/fonts/custom-font/fonts.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Assets/css/font-awesome.min.css" />
+    <!-- Bootsnav -->
+    <link rel="stylesheet" href="Assets/css/bootsnav.css" />
+    <!-- Fancybox -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Assets/css/jquery.fancybox.css?v=2.1.5"
+      media="screen" />
+    <!-- Custom stylesheet -->
+
+    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/project.owl.css" />
+    <link
+      rel="stylesheet"
+      href="Assets/css/owl-carasoul/owl-carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="Assets/css/owl-carasoul/owl.theme.default.min.css" />
+    <link rel="icon" href="Assets/images/logos/icon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" />
+    <style>
+                    .popuptext{
+        font-weight: 100% !important;
+      }
+
+      .fw-bold{
+        font-weight: bold;
+      }
+        .bg-warning{
+          background-color: rgb(249, 245, 145) !important;
+        }
+        .adverttitle {
+        font-size: 32px !important;
+        font-weight: bold !important;
+        color: #009aee !important;
+
+      }
+        .cancelbtn{
+          background-color: #323232 !important;
+          font-size: 20px !important;
+
+        }
+        .confirmbtn{
+          background-color: #009aee !important;
+          font-size: 20px !important;
+        }
+        #advert {
+              animation: move 30s linear infinite;
+              background-color: #009aee !important;
+                  }
+                  #adbanner{
+                    background-color: #009aee !important;
+                  }
+          #advert2 {
+              animation: move 30s linear infinite;
+
+          }
+        .large-text {
+        font-size: 30px !important;
+      }
+
+        .red-title {
+          color: red !important;
+          font-size: 24px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 16px !important;
+        }
+
+        @media screen and (min-width: 768px) {
+          /* Only apply this style for screens larger than 768px */
+          .large-text {
+            font-size: 20px;
+          }
+
+          .popuptext{
+        font-size: 20px !important;
+      }
+        }
+
+      }
+    </style>
+  </head>
+  <body class="body m-0 p-0">
+    {%include nav.html%} {{content}} {%include footer.html %}
+  </body>
+</html>
